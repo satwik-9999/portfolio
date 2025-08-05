@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Portfolio</h1>
+
+    <h2>About Me</h2>
+    <p>Hi! I am learning web development. This is my first portfolio webpage.</p>
+
+    <img src="1_V-Jp13LvtVc2IiY2fp4qYw.jpg" alt="My Photo" width="300">
+
+    <h2>Skills</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Java (Basic)</li>
+    </ul>
+
+    <h2>Projects</h2>
+    <ol>
+        <li>Personal Resume</li>
+        <li>Simple Calculator</li>
+        <li>To-Do List</li>
+    </ol>
+
+    <h3>Project Table</h3>
+    <table>
+        <tr>
+            <th>Project</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>Resume</td>
+            <td>Completed</td>
+        </tr>
+        <tr>
+            <td>To-Do List</td>
+            <td>In Progress</td>
+        </tr>
+    </table>
+
+    <h2>Contact Me</h2>
+    <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email"><br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" value="male"> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br><br>
+
+        <label for="city">City:</label><br>
+        <select id="city">
+            <option value="hyd">Hyderabad</option>
+            <option value="delhi">Delhi</option>
+            <option value="mumbai">Mumbai</option>
+        </select><br><br>
+
+        <label for="message">Your Message:</label><br>
+        <textarea id="message" rows="4" cols="30"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>learned from<a href="https://www.w3schools.com" target="_blank">W3Schools</a></p>
+
+    <hr>
+
+    <p>&copy; 2025 Satwik</p>
+
+</body>
+</html>

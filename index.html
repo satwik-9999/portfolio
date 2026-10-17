@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satwik Paladugula &bull; Backend & Software Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of Satwik Paladugula - Computer Science Undergraduate, Backend Engineer specializing in Java, Spring Boot, Python, FastAPI, and Database Systems.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            950: '#07090e',
+                            900: '#0b0f19',
+                            850: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        },
+                        brand: {
+                            cyan: '#06b6d4',
+                            blue: '#3b82f6',
+                            indigo: '#6366f1',
+                            emerald: '#10b981',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #07090e;
+            color: #f1f5f9;
+        }
+        .glow-cyan {
+            box-shadow: 0 0 50px -10px rgba(6, 182, 212, 0.15);
+        }
+        .glow-blue {
+            box-shadow: 0 0 50px -10px rgba(59, 130, 246, 0.15);
+        }
+        .glass-nav {
+            background: rgba(11, 15, 25, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .card-surface {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(8px);
+        }
+        .card-surface:hover {
+            border-color: rgba(59, 130, 246, 0.35);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- Sticky Glass Navigation -->
+    <header class="glass-nav sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white font-black text-sm shadow-md group-hover:scale-105 transition-transform">
+                    SP
+                </div>
+                <span class="font-extrabold text-base tracking-tight text-white group-hover:text-cyan-400 transition">Satwik Paladugula</span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-7 text-xs font-semibold uppercase tracking-wider text-slate-400">
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#skills" class="hover:text-white transition">Skills</a>
+                <a href="#projects" class="hover:text-white transition">Projects</a>
+                <a href="#education" class="hover:text-white transition">Education</a>
+                <a href="#certifications" class="hover:text-white transition">Certifications</a>
+                <a href="#contact" class="hover:text-white transition">Contact</a>
+            </nav>
+
+            <!-- Action Button -->
+            <div class="flex items-center gap-3">
+                <a href="resume.pdf" download="Satwik_Paladugula_Resume.pdf" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white text-xs font-bold px-4 py-2 rounded-xl shadow-lg shadow-blue-500/20 transition transform hover:-translate-y-0.5">
+                    <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                    <span>Resume PDF</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-12 space-y-28">
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="pt-8 sm:pt-14 relative flex flex-col items-start justify-center">
+            <!-- Subtle Radial Gradient Background -->
+            <div class="absolute -top-10 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute top-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="space-y-6 max-w-3xl relative z-10">
+                <!-- Status Pill -->
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-medium text-slate-300 shadow-sm">
+                    <span class="flex h-2 w-2 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    </span>
+                    <span>Available for Software Engineering Internships &amp; Roles</span>
+                </div>
+
+                <!-- Headline -->
+                <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-white leading-tight">
+                    Architecting Robust <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-400 bg-clip-text text-transparent">Backend Systems</span> &amp; Intelligent APIs.
+                </h1>
+
+                <p class="text-base sm:text-lg text-slate-400 leading-relaxed max-w-2xl">
+                    I'm <b>Satwik Paladugula</b>, a Computer Science undergraduate with strong foundations in <b>Java, Spring Boot, SQL, Python, and Database Systems</b>. Dedicated to engineering secure reverse proxies, scalable microservices, and high-performance applications.
+                </p>
+
+                <!-- Quick CTA Buttons -->
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                    <a href="#projects" class="inline-flex items-center gap-2 bg-white hover:bg-slate-200 text-slate-950 font-extrabold text-xs px-5 py-3 rounded-xl transition shadow-lg">
+                        <i data-lucide="layers" class="w-4 h-4"></i> Explore Projects
+                    </a>
+                    <a href="resume.pdf" download="Satwik_Paladugula_Resume.pdf" class="inline-flex items-center gap-2 bg-slate-800/90 hover:bg-slate-700 text-white font-bold text-xs px-5 py-3 rounded-xl border border-slate-700 transition">
+                        <i data-lucide="file-text" class="w-4 h-4 text-cyan-400"></i> Download Resume
+                    </a>
+                    <a href="https://github.com/satwik-9999" target="_blank" class="p-3 bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white rounded-xl border border-slate-800 transition" title="GitHub Profile">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                    </a>
+                    <a href="mailto:satwik000001@gmail.com" class="p-3 bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white rounded-xl border border-slate-800 transition" title="Send Email">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                    </a>
+                </div>
+
+                <!-- Quick Metrics Bar -->
+                <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-slate-800/80">
+                    <div>
+                        <div class="text-2xl font-black text-white">4</div>
+                        <div class="text-xs text-slate-400 mt-0.5">Flagship Projects</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-black text-cyan-400">5</div>
+                        <div class="text-xs text-slate-400 mt-0.5">Official Certifications</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-black text-blue-400">8.25</div>
+                        <div class="text-xs text-slate-400 mt-0.5">B.Tech CGPA (2023–27)</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-black text-emerald-400">100%</div>
+                        <div class="text-xs text-slate-400 mt-0.5">Verified GitHub Code</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT ME SECTION -->
+        <section id="about" class="space-y-6">
+            <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-cyan-400">
+                <i data-lucide="user" class="w-4 h-4"></i> About Me
+            </div>
+            
+            <div class="card-surface p-6 sm:p-8 rounded-3xl space-y-4">
+                <h2 class="text-2xl font-black text-white">Engineering Background &amp; Philosophy</h2>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                    Computer Science undergraduate with strong foundations in <b>Java, SQL, Object-Oriented Programming, and Database Management Systems</b>. Experienced in developing backend applications using <b>Spring Boot and MySQL</b> while building RESTful APIs and solving technical problems through hands-on projects.
+                </p>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Passionate about building production-grade software that solves genuine bottlenecks—from enterprise LLM security proxies to FinTech payment infrastructure. Excellent verbal and written communication skills with a commitment to collaborative software engineering, clean code architecture, and continuous technical growth.
+                </p>
+            </div>
+        </section>
+
+        <!-- TECHNICAL SKILLS BENTO GRID -->
+        <section id="skills" class="space-y-6">
+            <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-cyan-400">
+                <i data-lucide="cpu" class="w-4 h-4"></i> Technical Competencies
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-black text-white">Core Skills &amp; Technologies</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <!-- Box 1: Languages -->
+                <div class="card-surface p-6 rounded-2xl space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center">
+                        <i data-lucide="code-2" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-base">Programming Languages</h3>
+                    <p class="text-xs text-slate-400">Foundational &amp; backend languages</p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">Java</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">SQL</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">Python</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">C</span>
+                    </div>
+                </div>
+
+                <!-- Box 2: Frameworks & Backend -->
+                <div class="card-surface p-6 rounded-2xl space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+                        <i data-lucide="server" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-base">Frameworks &amp; Backend</h3>
+                    <p class="text-xs text-slate-400">API architecture &amp; ORM tools</p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-emerald-300 border border-slate-700">Spring Boot</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">Spring Data JPA</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">Hibernate</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-cyan-300 border border-slate-700">FastAPI</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">RESTful APIs</span>
+                    </div>
+                </div>
+
+                <!-- Box 3: Databases -->
+                <div class="card-surface p-6 rounded-2xl space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center">
+                        <i data-lucide="database" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-base">Database &amp; Storage</h3>
+                    <p class="text-xs text-slate-400">Data persistence &amp; schema design</p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">MySQL</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">SQLite</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">DBMS</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">Relational Design</span>
+                    </div>
+                </div>
+
+                <!-- Box 4: Developer Tools -->
+                <div class="card-surface p-6 rounded-2xl space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center">
+                        <i data-lucide="terminal" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-base">Developer Tools</h3>
+                    <p class="text-xs text-slate-400">Testing, version control &amp; editors</p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">Git</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">GitHub</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">Postman</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">VS Code</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">Linux</span>
+                    </div>
+                </div>
+
+                <!-- Box 5: Core Computer Science -->
+                <div class="card-surface p-6 rounded-2xl space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center">
+                        <i data-lucide="book-open" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-base">Core Computer Science</h3>
+                    <p class="text-xs text-slate-400">Academic &amp; theoretical foundations</p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">Object-Oriented Programming (OOP)</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">Data Structures &amp; Algorithms</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">Operating Systems</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">Computer Networks</span>
+                    </div>
+                </div>
+
+                <!-- Box 6: Professional Competencies -->
+                <div class="card-surface p-6 rounded-2xl space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center">
+                        <i data-lucide="sparkles" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-base">Professional Competencies</h3>
+                    <p class="text-xs text-slate-400">Teamwork &amp; execution strength</p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-amber-300 border border-slate-700">Problem Solving</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">Verbal &amp; Written Communication</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">Collaborative Engineering</span>
+                        <span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">Continuous Learning</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED PROJECTS (ALL 4 PROJECTS) -->
+        <section id="projects" class="space-y-8">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
+                <div>
+                    <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-cyan-400">
+                        <i data-lucide="folder-git-2" class="w-4 h-4"></i> Featured Work
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">Engineering Projects</h2>
+                </div>
+                <a href="https://github.com/satwik-9999" target="_blank" class="text-xs font-bold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                    View GitHub Repositories <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Project 1: AI Security Gateway -->
+                <div class="card-surface p-6 sm:p-7 rounded-3xl flex flex-col justify-between space-y-5 hover:shadow-xl hover:shadow-cyan-500/5 transition">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] uppercase font-extrabold tracking-wider px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">
+                                AI / LLM Security
+                            </span>
+                            <span class="text-xs text-slate-500 font-mono">0.14 ms Latency</span>
+                        </div>
+                        <h3 class="text-xl font-black text-white">AI Security Gateway</h3>
+                        <p class="text-xs font-semibold text-cyan-400">Enterprise LLM Proxy &amp; Prompt Defense</p>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Reverse proxy and policy enforcement layer between enterprise clients and LLMs to prevent confidential data leakage and mitigate prompt injection attacks. Features algorithmic PII detectors (Luhn checksum, ISO 7064, Shannon entropy) and stateless token masking.
+                        </p>
+
+                        <!-- Tech Stack Tags -->
+                        <div class="flex flex-wrap gap-1.5 pt-1">
+                            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Python</span>
+                            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">FastAPI</span>
+                            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Streamlit</span>
+                            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">SQLite</span>
+                            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Pydantic</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-500 font-medium">90% Unit Test Coverage</span>
+                        <a href="https://github.com/satwik-9999" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-white hover:text-cyan-400 transition">
+                            <i data-lucide="github" class="w-4 h-4"></i> Code Repository
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: CollectFast -->
+                <div class="card-surface p-6 sm:p-7 rounded-3xl flex flex-col justify-between space-y-5 hover:shadow-xl hover:shadow-blue-500/5 transition">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] uppercase font-extrabold tracking-wider px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">
+                                FinTech &amp; Automation
+                            </span>
+                            <span class="text-xs text-emerald-400 font-bold">Live Demo</span>
+                        </div>
+                        <h3 class="text-xl font-black text-white">CollectFast</h3>
+                        <p class="text-xs font-semibold text-blue-400">0% Fee UPI Invoicing &amp; WhatsApp Recovery Engine</p>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Automated B2B invoicing SaaS enabling businesses to create GST tax invoices, collect payments via dynamic NPCI UPI QR codes with 0% gateway fees, and recover overdue invoices 70% faster via 1-click WhatsApp behavioral nudges.
+                        </p>
+
+                        <!-- Tech Stack Tags -->
+                        <div class="flex flex-wrap gap-1.5 pt-1">
+                            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Python</span>
+                            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">FastAPI</span>
+                            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">ReportLab</span>
+                            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">UPI Protocol</span>
+                            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Tailwind</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+                        <a href="https://satwik-9999.github.io/collectfast/" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-400 hover:text-emerald-300 transition">
+                            <i data-lucide="external-link" class="w-4 h-4"></i> Live Simulator
+                        </a>
+                        <a href="https://github.com/satwik-9999/collectfast" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-white hover:text-blue-400 transition">
+                            <i data-lucide="github" class="w-4 h-4"></i> Code Repo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: ClarifySQL -->
+                <div class="card-surface p-6 sm:p-7 rounded-3xl flex flex-col justify-between space-y-5 hover:shadow-xl hover:shadow-indigo-500/5 transition">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] uppercase font-extrabold tracking-wider px-2.5 py-0.5 rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">
+                                Natural Language to SQL
+                            </span>
+                            <span class="text-xs text-slate-500 font-mono">AST Validation</span>
+                        </div>
+                        <h3 class="text-xl font-black text-white">ClarifySQL</h3>
+                        <p class="text-xs font-semibold text-indigo-400">AI-Powered Natural Language Data Assistant</p>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Translates natural language business questions into secure, schema-aware SQL queries for MySQL databases. Implements ambiguity detection, interactive clarification workflows, and strict AST-level SQL validation with SQLGlot to prevent unauthorized mutations.
+                        </p>
+
+                        <!-- Tech Stack Tags -->
+                        <div class="flex flex-wrap gap-1.5 pt-1">
+                            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Python</span>
+                            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">FastAPI</span>
+                            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Gemini API</span>
+                            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">MySQL</span>
+                            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">SQLGlot</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-500 font-medium">Session-based Memory</span>
+                        <a href="https://github.com/satwik-9999" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-white hover:text-indigo-400 transition">
+                            <i data-lucide="github" class="w-4 h-4"></i> Code Repository
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4: Student Management System -->
+                <div class="card-surface p-6 sm:p-7 rounded-3xl flex flex-col justify-between space-y-5 hover:shadow-xl hover:shadow-purple-500/5 transition">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] uppercase font-extrabold tracking-wider px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/20">
+                                Enterprise Java Backend
+                            </span>
+                            <span class="text-xs text-slate-500 font-mono">Spring Boot</span>
+                        </div>
+                        <h3 class="text-xl font-black text-white">Student Management System</h3>
+                        <p class="text-xs font-semibold text-purple-400">Full CRUD Enterprise RESTful Backend</p>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Engineered a robust RESTful backend application using Spring Boot and MySQL for reliable student record management. Implemented complete CRUD operations utilizing Spring Data JPA and Hibernate for reliable relational database persistence. Tested extensively with Postman.
+                        </p>
+
+                        <!-- Tech Stack Tags -->
+                        <div class="flex flex-wrap gap-1.5 pt-1">
+                            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Java</span>
+                            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Spring Boot</span>
+                            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Spring Data JPA</span>
+                            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Hibernate</span>
+                            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">MySQL</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-500 font-medium">Postman Verified APIs</span>
+                        <a href="https://github.com/satwik-9999" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-white hover:text-purple-400 transition">
+                            <i data-lucide="github" class="w-4 h-4"></i> Code Repository
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- EDUCATION TIMELINE -->
+        <section id="education" class="space-y-6">
+            <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-cyan-400">
+                <i data-lucide="graduation-cap" class="w-4 h-4"></i> Academic Background
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-black text-white">Education Timeline</h2>
+
+            <div class="space-y-4">
+                <!-- Degree -->
+                <div class="card-surface p-6 rounded-2xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <div class="space-y-1">
+                        <div class="text-base font-bold text-white">B.Tech &mdash; Computer Science and Technology</div>
+                        <div class="text-sm text-cyan-400 font-medium">Sri Vasavi Engineering College, Tadepalligudem</div>
+                    </div>
+                    <div class="text-left sm:text-right">
+                        <div class="text-sm font-bold text-white">2023 &ndash; 2027</div>
+                        <div class="inline-block mt-0.5 px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-blue-500/10 text-blue-300 border border-blue-500/20">
+                            CGPA: 8.25 / 10
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Intermediate -->
+                <div class="card-surface p-6 rounded-2xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <div class="space-y-1">
+                        <div class="text-base font-bold text-white">Intermediate (PCM)</div>
+                        <div class="text-sm text-slate-400">Bharatiya Vidya Bhavans</div>
+                    </div>
+                    <div class="text-left sm:text-right">
+                        <div class="text-sm font-bold text-white">2021 &ndash; 2023</div>
+                        <div class="text-xs text-slate-400 font-semibold mt-0.5">Score: 84.8%</div>
+                    </div>
+                </div>
+
+                <!-- SSC -->
+                <div class="card-surface p-6 rounded-2xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <div class="space-y-1">
+                        <div class="text-base font-bold text-white">Secondary School Certificate (SSC)</div>
+                        <div class="text-sm text-slate-400">Tirumala Proactive School</div>
+                    </div>
+                    <div class="text-left sm:text-right">
+                        <div class="text-sm font-bold text-white">2020 &ndash; 2021</div>
+                        <div class="text-xs text-emerald-400 font-bold mt-0.5">Perfect 10 / 10 CGPA</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROFESSIONAL CERTIFICATIONS -->
+        <section id="certifications" class="space-y-6">
+            <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-cyan-400">
+                <i data-lucide="award" class="w-4 h-4"></i> Official Credentials
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-black text-white">Professional Certifications</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Cert 1 -->
+                <div class="card-surface p-5 rounded-2xl space-y-2">
+                    <div class="text-emerald-400"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
+                    <div class="font-bold text-white text-sm">ServiceNow Certified Application Developer (CAD)</div>
+                    <div class="text-xs text-slate-500 font-medium">ServiceNow Official</div>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="card-surface p-5 rounded-2xl space-y-2">
+                    <div class="text-emerald-400"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
+                    <div class="font-bold text-white text-sm">ServiceNow Certified System Administrator (CSA)</div>
+                    <div class="text-xs text-slate-500 font-medium">ServiceNow Official</div>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="card-surface p-5 rounded-2xl space-y-2">
+                    <div class="text-blue-400"><i data-lucide="cloud" class="w-6 h-6"></i></div>
+                    <div class="font-bold text-white text-sm">SAP Certified Associate &mdash; Back-End Developer - ABAP Cloud</div>
+                    <div class="text-xs text-slate-500 font-medium">SAP Official</div>
+                </div>
+
+                <!-- Cert 4 -->
+                <div class="card-surface p-5 rounded-2xl space-y-2">
+                    <div class="text-purple-400"><i data-lucide="cpu" class="w-6 h-6"></i></div>
+                    <div class="font-bold text-white text-sm">Oracle Certified Generative AI Professional</div>
+                    <div class="text-xs text-slate-500 font-medium">Oracle Official</div>
+                </div>
+
+                <!-- Cert 5 -->
+                <div class="card-surface p-5 rounded-2xl space-y-2">
+                    <div class="text-cyan-400"><i data-lucide="zap" class="w-6 h-6"></i></div>
+                    <div class="font-bold text-white text-sm">Salesforce Agentforce Specialist</div>
+                    <div class="text-xs text-slate-500 font-medium">Salesforce Official</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="space-y-6 pt-6">
+            <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-cyan-400">
+                <i data-lucide="mail" class="w-4 h-4"></i> Get In Touch
+            </div>
+            
+            <div class="card-surface p-8 sm:p-10 rounded-3xl grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <h2 class="text-3xl font-black text-white">Let's Connect &amp; Build Together</h2>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        I am currently looking for software engineering internships and backend developer roles. Whether you have a project inquiry, recruitment opportunity, or simply want to discuss systems architecture, my inbox is always open.
+                    </p>
+
+                    <div class="space-y-3 pt-4 text-sm text-slate-300">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-4 h-4 text-cyan-400"></i>
+                            <a href="mailto:satwik000001@gmail.com" class="hover:underline font-mono text-white">satwik000001@gmail.com</a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-4 h-4 text-cyan-400"></i>
+                            <a href="tel:+917674864689" class="hover:underline font-mono text-white">+91-7674864689</a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-cyan-400"></i>
+                            <span>Tadepalligudem, Andhra Pradesh, India</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="github" class="w-4 h-4 text-cyan-400"></i>
+                            <a href="https://github.com/satwik-9999" target="_blank" class="hover:underline font-mono text-white">github.com/satwik-9999</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Quick Email Form -->
+                <form onsubmit="handleContact(event)" class="space-y-4 bg-slate-900/80 p-6 rounded-2xl border border-slate-800">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-400 mb-1">Your Name</label>
+                        <input type="text" id="contactName" required placeholder="Recruiter / Collaborator Name"
+                               class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-400 mb-1">Subject</label>
+                        <input type="text" id="contactSubject" required placeholder="Interview / Role Opportunity / Collab"
+                               class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-400 mb-1">Message</label>
+                        <textarea id="contactMsg" rows="3" required placeholder="Hello Satwik, I came across your portfolio..."
+                                  class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3.5 text-sm text-white focus:outline-none focus:border-cyan-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-bold text-xs py-3 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+                        <i data-lucide="send" class="w-4 h-4"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800/80 py-8 mt-20 text-center text-xs text-slate-500 space-y-2">
+        <div>
+            Designed &amp; Engineered by <span class="font-bold text-white">Satwik Paladugula</span> &bull; 2026
+        </div>
+        <div class="flex items-center justify-center gap-4 text-slate-400">
+            <a href="https://github.com/satwik-9999" target="_blank" class="hover:text-white">GitHub</a> &bull;
+            <a href="https://linkedin.com" target="_blank" class="hover:text-white">LinkedIn</a> &bull;
+            <a href="mailto:satwik000001@gmail.com" class="hover:text-white">Email</a> &bull;
+            <a href="resume.pdf" download class="hover:text-white">Resume</a>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function handleContact(e) {
+            e.preventDefault();
+            const name = document.getElementById('contactName').value;
+            const subject = document.getElementById('contactSubject').value;
+            const msg = document.getElementById('contactMsg').value;
+            const fullBody = `Hi Satwik,\n\nName: ${name}\n\nMessage:\n${msg}`;
+            window.location.href = `mailto:satwik000001@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(fullBody)}`;
+        }
+    </script>
+</body>
+</html>
